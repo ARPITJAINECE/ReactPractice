@@ -1,0 +1,8 @@
+/* class made for styling the react components and the file which is to be styled is named as the StyleSheets.js */
+.primary{
+    color: orange;
+}
+
+.font-xl{
+    font-size: 72px;
+}

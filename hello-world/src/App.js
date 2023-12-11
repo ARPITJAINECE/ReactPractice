@@ -11,18 +11,27 @@ import EventBind from './components/EventBind';
 import ParentComponent from './components/ParentComponent';
 import UserGreeting from './components/UserGreeting';
 import NameList from './components/NameList';
+import StyleSheets from './components/StyleSheets';
+import Inline from './components/Inline';
+import styles from './appStyles.module.css';
+import './appStyles.css';
 
 function App() {
   return (
     <div className="App">
-      <NameList></NameList>
-    {/* <UserGreeting></UserGreeting> */}
 
-    {/* <ParentComponent></ParentComponent> */}
+      <h1 className='error'>Error</h1>
+      <h1 className={styles.success}>Success</h1>
+      {/* <Inline></Inline> */}
+      {/* <StyleSheets primary={true}></StyleSheets> */}
+      {/* <NameList></NameList> */}
+      {/* <UserGreeting></UserGreeting> */}
 
-    {/* <EventBind></EventBind> */}
-    {/* <FunctionClick></FunctionClick> */}
-    {/* <ClassClick></ClassClick> */}
+      {/* <ParentComponent></ParentComponent> */}
+
+      {/* <EventBind></EventBind> */}
+      {/* <FunctionClick></FunctionClick> */}
+      {/* <ClassClick></ClassClick> */}
 
       {/* <Greet name='Arpit' heroName='Batman'>
         <p>this is the children props</p>
@@ -31,16 +40,16 @@ function App() {
       {/* <Greet name='Jain' heroName='Superman'>
         <button>push</button>
       </Greet> */}
-      
+
       {/* <Welcome name='Arpit' heroName='Batman'></Welcome>  */}
       {/* <Welcome name='Jain' heroName='Superman'></Welcome>  */}
-      
+
       {/* <Hello></Hello> */}
 
       {/* <Message></Message> */}
 
       {/* <Counter></Counter> */}
-      
+
     </div>
   );
 }

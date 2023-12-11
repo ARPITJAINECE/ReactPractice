@@ -1,7 +1,7 @@
 //list rendering and also proper refactoring the code
 import React from 'react'
 
-function Person() {
+function Person({ person }) {//{person}-->this is the way to destructure the props in the function argument
     return (
         <div>
             <h2>
