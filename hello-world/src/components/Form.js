@@ -28,13 +28,19 @@ class Form extends Component {
             topic: event.target.value
         })
     }
+
+    handleSubmit = (event) => {
+        alert(` ${this.state.username} ${this.state.comments} ${this.state.topic}`)
+        event.preventDefault()
+    }
+
     render() {
         return (
             //   <div className='App'>
             //     FormComponent
             //   </div>
             //we will be using the form tag
-            <form>
+            <form onSubmit={this.handleSubmit}>
                 {/* below is for the text */}
                 <div>
                     <label>UserName</label>
@@ -54,6 +60,7 @@ class Form extends Component {
                         <option value='vue'>Vue</option>
                     </select>
                 </div>
+                <button type='submit'>Submit</button>
             </form>
         )
     }
