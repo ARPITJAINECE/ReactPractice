@@ -1,9 +1,11 @@
 //parent component to be linked with the Pure-Component.js
+//also have a link with the MemoComp.js for the React.memo......
 import React, { Component, PureComponent } from 'react'
 import RegularComponent from './RegularComponent'
 import PureComp from './PureComponent'
+import MemoComp from './MemoComp'
 
-class ParentComp extends PureComponent {
+class ParentComp extends Component {
     constructor(props) {
         super(props)
 
@@ -25,9 +27,10 @@ class ParentComp extends PureComponent {
         return (
             <div>
                 Parent Component
-                <RegularComponent name={this.state.name}></RegularComponent>
+                {/* <RegularComponent name={this.state.name}></RegularComponent> */}
                 {/* <PureComp name={this.state.name}></PureComp> */}
-                <PureComp name={this.state.name}></PureComp>
+                {/* <PureComp name={this.state.name}></PureComp> */}
+                <MemoComp name={this.state.name}></MemoComp>
             </div>
         )
     }
