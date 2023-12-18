@@ -16,6 +16,14 @@ function HookMouse() {
     useEffect(() => {
         console.log('useEffect called')
         window.addEventListener('mousemove', logMousePosition)
+
+        // in return we always write the clean-up code,i.e. equivalent to componentWillUnmount
+        //cancelling subscriptions, times and removing the Eventlisteners
+        return () => {
+            console.log('Component unmounting code')
+            window.removeEventListener('mousemove', logMousePosition)
+        }
+
     }, [])//we will be using the empty dependency array, as we only want to call it once on the initial rendering of the output
     return (
         <div>
