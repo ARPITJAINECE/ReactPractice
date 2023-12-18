@@ -9,7 +9,9 @@ function IntervalHookCounter() {
         setCount(count + 1)
     }
 
+
     useEffect(() => {
+
         const interval = setInterval(tick, 1000)
         return () => {
             clearInterval(interval)
