@@ -1,5 +1,5 @@
 //in this component we will be fetchig the data of the individual post on the basis of the 
-//post id and it will happen if we click on the button
+//post id and it will happen if we click on the buttonnpm 
 //rfce
 
 import axios from 'axios'
