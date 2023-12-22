@@ -11,9 +11,9 @@ const initialState = {
 const reducer = (currentState, action) => { //based on the action value, 3 cases arises
     switch (action.type) {
         case 'increment':
-            return { firstCounter: currentState.firstCounter + 1 };
+            return { firstCounter: currentState.firstCounter + action.value };
         case 'decrement':
-            return { firstCounter: currentState.firstCounter - 1 };
+            return { firstCounter: currentState.firstCounter - action.value };
         case 'reset':
             return initialState;
         default:
@@ -27,8 +27,10 @@ function CounterTwo() {
         <div>
 
             <div>Count value is - {count.firstCounter}</div>
-            <button onClick={() => dispatch({ type: 'increment' })}>Increment</button>
-            <button onClick={() => dispatch({ type: 'decrement' })}>decrement</button>
+            <button onClick={() => dispatch({ type: 'increment', value: 1 })}>Increment</button>
+            <button onClick={() => dispatch({ type: 'decrement', value: 1 })}>decrement</button>
+            <button onClick={() => dispatch({ type: 'increment', value: 5 })}>Increment by 5</button>
+            <button onClick={() => dispatch({ type: 'decrement', value: 5 })}>decrement by 5</button>
             <button onClick={() => dispatch({ type: 'reset' })}>Reset</button>
 
         </div>
